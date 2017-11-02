@@ -9,7 +9,8 @@ function lines_from(file)
   return lines
 end
 
-local script = "C:\\Users\\brennan\\envscripts\\go2targets.bat"
+local path_to_here = debug.getinfo(1).source:match("@?(.*/)")
+local script = string.format("%s../../../go2targets.bat", path_to_here)
 local lines = lines_from(script)
 local targets = {}
 for i, line in ipairs(lines) do
