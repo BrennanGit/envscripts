@@ -1,0 +1,1489 @@
+docker ps
+alias reloadbuildbots=docker ps -q | xargs docker rm -f  && make animo_buildbot_master_apps && sleep 5 && make animo_apps_buildbot_workers && docker ps
+alias reloadbuildbots="docker ps -q | xargs docker rm -f  && make animo_buildbot_master_apps && sleep 5 && make animo_apps_buildbot_workers && docker ps"
+set
+cd %CMDER_ROOT%
+cd config\
+ls
+nano user-aliases.cmd 
+alias execmaster=docker exec -it buildbot_master_apps
+alias execworker=docker exec -it buildbot_worker_apps
+execmaster
+execmaster bash
+exit
+docker ps
+alias reloadbuildbots=docker ps -q | xargs docker rm -f  && make animo_buildbot_master_apps && sleep 5 && make animo_apps_buildbot_workers && docker ps
+alias reloadbuildbots="docker ps -q | xargs docker rm -f  && make animo_buildbot_master_apps && sleep 5 && make animo_apps_buildbot_workers && docker ps"
+set
+alias execmaster=docker exec -it buildbot_master_apps
+alias execworker=docker exec -it buildbot_worker_apps
+execmaster
+cd %CMDER_ROOT%
+dir
+ll
+cat profile.d\
+type profile.d\
+ls profile.d\
+cat settings 
+nano settings 
+nano user-profile.cmd 
+cd vendor\
+ls
+cat user-aliases.cmd.example 
+cd /?
+cmderr
+cmderr.bat
+alias /r
+cd ..
+cd config\
+nano user-aliases.cmd 
+alias /reload
+alias
+execmaster bash
+exit
+cmderr
+cmderr.bat
+alias /r
+cd ..
+cd config\
+nano user-aliases.cmd 
+alias /reload
+alias
+execmaster bash
+exit
+ssh git@github.com
+docker exec -it buildbot_master_apps bash
+docker exec -it buildbot_worker_apps bash
+docker logs buildbot_master_apps
+docker ps
+docker logs 34
+docker logs 5d
+cd config\
+nano user-aliases.cmd 
+alias /reload
+alias
+execmaster bash
+exit
+cmderr
+cmderr.bat
+alias /r
+cd ..
+nano user-aliases.cmd 
+exit
+ssh git@github.com
+docker exec -it buildbot_master_apps bash
+docker exec -it buildbot_worker_apps bash
+docker logs buildbot_master_apps
+docker logs 34
+docker logs 5d
+title layered
+alias
+execmaster bash
+execworker
+execworker bash
+reloadbuildbots
+alias 
+unalias reloadbuildbots
+go devops
+cd Testing\xmos_docker\
+alias rlb=pushd C:\Users\brennan\DevOps\Testing\xmos_docker $T reloadbuildbots $T popd
+go scratch
+doskey /macros
+alias reloadbuildbots=docker ps -q | xargs docker rm -f  $T make animo_buildbot_master_apps $T sleep 5 $T make animo_apps_buildbot_workers $T docker ps
+cd %CMDER_ROOT%
+cd config\
+subl .
+e.
+alias s.=subl .
+s.
+rlb
+alias /reload
+rlbb
+docker ps
+docker logs 5d
+cd Desktop\Utilities\
+title split
+ping google.com
+title loweright
+tree
+title thisone
+jdvkja
+cmder /?
+go envscripts
+cd cmder_mini\
+cmder.exe /?
+set CMD
+cmder.exe C:\
+exit
+exit
+exit
+exit
+git pull origin master 
+git status
+go devops
+cd Testing\
+ls
+gitclone infr_apps
+cd ..
+gitclone swdb
+alias
+chrome
+google-chrome
+chrome-browser
+ls
+gitclone infr_apps
+gitclone swdb
+cd ..\..
+cd xmos_docker\
+git gui
+make swdb_test
+make buildbot_worker_apps
+cd src
+cd buildbot\
+make animo_buildbot_worker_apps
+cat Makefile 
+cd ..
+make animo_buildbot_master_apps
+git gui
+exit
+exit
+set CMD
+cmder.exe C:\
+exit
+exit
+exit
+exit
+git pull origin master 
+git status
+go devops
+cd Testing\
+gitclone infr_apps
+gitclone swdb
+git remote add colin git@github.com:cdoak/infr_apps
+git pull colin
+git checkout colin master
+git checkout colin/master
+git remote rm colin
+git remote
+git remote -v
+git pull upstream
+git branch -a
+git git checkout origin/master
+git log
+git checkout origin/master
+git merge upstream master
+git merge upstream/master
+git mergetool
+git reset --hard HEAD
+git checkout upstream/master
+cd ..\..
+cd ..
+cd swdb\
+ls
+git pull
+touch requirements.txt
+git add requirements.txt 
+git gui
+docker stats
+nano requirements.txt 
+execworker bash
+docker run -it ubuntu bash
+rlbb
+docker ps
+chrome
+google-chrome
+chrome-browser
+go scratch
+cd xmos_docker\
+ls
+rlbb
+docker stats
+virtualenv here
+cd here\Scripts\
+where pip
+pip install yaml
+pip install pyyaml
+python
+jdvkja
+cmder /?
+go envscripts
+cd cmder_mini\
+cmder.exe /?
+set CMD
+cmder.exe C:\
+exit
+exit
+exit
+git remote
+git pull colin swdb_user_pass
+git fetchgit gui
+git branch -a
+docker ps
+git checkout virtualenv_testing 
+git log a6202
+git og
+git diff f167931fbaf94f2707766d0a747bb0621e74560c a62021ab1047878ccdba516c546c53d02bfb6255
+git reset --hard HEAD
+git reset --hard HEAD^
+git reset --hard HEAD~
+git status
+cd ..
+set username=swnb
+set password=xmos0115
+username=swnb
+echo %SHELL%
+sh
+bash
+echo %password%
+rlbb
+rlbb < swnb xmos0115 < swnb xmos0115
+rlbb < echo swnb xmos0115
+git checkout
+git branch
+git checkout swdb_user_pass 
+git gui
+git merge swdb_user_pass 
+git merge swdb_user_pass
+git log
+git describe 16686c5e557fb2c8d0eeb65746a4a07de1bde46e
+git show 16686c5e557fb2c8d0eeb65746a4a07de1bde46e
+ip config
+ipconfig
+exit
+python
+cat test
+cat test.txt 
+execworker bash
+docker stats
+git status
+git push
+alias rlb=pushd C:\Users\brennan\DevOps\Testing\xmos_docker $T reloadbuildbots $T popd
+go scratch
+doskey /macros
+alias reloadbuildbots=docker ps -q | xargs docker rm -f  $T make animo_buildbot_master_apps $T sleep 5 $T make animo_apps_buildbot_workers $T docker ps
+cd %CMDER_ROOT%
+cd config\
+subl .
+e.
+alias s.=subl .
+s.
+rlb
+docker logs 5d
+cd Desktop\Utilities\
+title split
+ping google.com
+title loweright
+tree
+title thisone
+jdvkja
+cmder /?
+go envscripts
+cd cmder_mini\
+cmder.exe /?
+set CMD
+cmder.exe C:\
+exit
+exit
+exit
+git pull origin master 
+git status
+go devops
+cd Testing\
+gitclone infr_apps
+gitclone swdb
+git branch
+git branch -
+git reset --hard HEAD
+git checkout -b virtualenv_testing
+git merge virtualenvs
+git merge origin/virtualenvs
+git rm swdb_upload.py 
+git chmod
+git update-index --chmod=+x AppsUpload.py
+git clone git://git/swdb.git
+cd swdb\
+git branch -a
+cd autobuild\
+git log
+cd xmos_docker\
+git gui
+docker run -it ubuntu bash
+make swdt_test
+make swdb_test
+ipconfig
+docker ps
+docker ps -q | xargs docker rm -f 
+docker images
+docker rmi 1380
+docker info
+docker volume prune
+docker system prune
+set username=swnb
+set password=xmos0115
+rlbb
+cd ..
+cd virtualenvs\
+xgit\scripts\view.py get -v=vda -b=sb\vda1
+cd sb
+ls -a
+s.f
+s.v
+alias /reload
+s.h
+ls
+s.h .
+s.v .
+exit
+s.h
+s.v .
+s.f .
+ls
+cd ~
+cd 
+cd ..\..\..
+cd ..
+subl .
+s.f
+s.v
+s.h
+exit
+s.v
+s.h
+s.v
+set username=swnb
+set password=xmos0115
+rlbb
+exit
+git update-index --chmod=+x AppsUpload.py
+git clone git://git/swdb.git
+cd swdb\
+cd autobuild\
+git log
+cd xmos_docker\
+docker run -it ubuntu bash
+make swdt_test
+make swdb_test
+ipconfig
+docker ps -q | xargs docker rm -f 
+docker images
+docker rmi 1380
+docker info
+docker volume prune
+docker system prune
+set username=swnb
+set password=xmos0115
+cd ..
+xgit\scripts\view.py get -v=vda -b=sb\vda1
+ls -a
+s.f
+s.v
+alias /reload
+s.h
+ls
+s.h .
+s.v .
+exit
+s.h
+s.v .
+s.f .
+cd ~
+cd 
+s.v
+s.h
+s.v
+go devops
+ld
+cd virtualenvs\
+s.h readme.md
+xgit\scripts\view.py get -v=vda -b=sb/vda2
+cd .envs\
+cd python\
+cd ../../..
+xgit\scripts\view.py update
+xgit\scripts\view.py update --help
+cd sb\.envs\python\vda\
+nano requirements.txt 
+y
+cd ..\..\..
+xgit\scripts\view.py update -v=vda -b=sb\vda2\
+cd sb
+cd vda2
+cd infr_scripts_pl\Build\
+UseVirtualEnv.bat 
+git remote add me git@github.com:brennangit/infr_scripts_pl
+git pull my
+git pull me
+git checkout virtualenvs
+cd ..\..
+cd views\
+nano vda.txt 
+nano xgit\views\vda.txt 
+s.h vda.txt
+s. xgit\views\vda.txt 
+s.h xgit\views\vda.txt 
+xgit\scripts\view.py update -v=vda -b=sb\vda2\ --strict
+cd sb\vda2\
+cd infr_scripts_pl\
+cd Build\
+cat UseVirtualEnv.bat 
+echo Enter 'deactivate' to exit the virtualenv C:\Users\brennan\DevOps\virtualenvs\sb\.envs\python\vda-0\Scripts\activate.bat
+SetupEnv.bat 
+deactivate
+cd ..\..\..\..
+cd xgit\
+git gui
+cd scripts\
+ls
+rm test.txt 
+git reset --hard HEAD
+git branch
+git branch -a
+git pull master
+git pull
+git merge master
+cd ..
+s.v views
+subl .
+s
+s.f
+sublim
+subl
+subl views\
+docker ps
+docker stats
+docker ps -q | xargs docker stop
+docker ps -a
+docker ps -aq
+docker ps -q
+docker ps -aq | xargs docker start
+rlbb
+set
+cmder
+exit
+exit
+kjnvsjvn
+exit
+exit
+exit
+kjnvsjvn
+exit
+cd ..
+ls
+s.h readme.md 
+exit
+kjnvsjvn
+rlbb
+go devops
+cd virtualenvs\
+s.h readme.md 
+exit
+exit
+kjnvsjvn
+exit
+s.h readme.md 
+exit
+kjnvsjvn
+rlbb
+go devops
+cd virtualenvs\
+s.h readme.md 
+exit
+rm this.py 
+s.h .
+s.h SetupEnv
+git checkout virtualenvs
+git pull
+git reset --hard HEAD
+git checkout virtualenv_testing 
+go scratch
+ls
+gitclone infr_scripts_pl
+rm -rf infr_scripts_pl\
+git clone git@github.com:brennangit/infr_scripts_pl
+cd infr_scripts_pl\
+git checkout virtualenvs 
+cd Build\
+s.h SetupEnv.bat 
+cd ..
+s.h .gitignore 
+git gui
+ls
+go env
+xmake', 'all', 'CONFIG=1i0o0_cir43_i2s_only_16khzs.h
+s.h
+exit
+kjnvsjvn
+rlbb
+go devops
+cd virtualenvs\
+s.h readme.md 
+rm this.py 
+s.h .
+s.h SetupEnv
+git checkout virtualenvs
+git pull
+git reset --hard HEAD
+git checkout virtualenv_testing 
+go scratch
+ls
+gitclone infr_scripts_pl
+rm -rf infr_scripts_pl\
+git clone git@github.com:brennangit/infr_scripts_pl
+cd infr_scripts_pl\
+git checkout virtualenvs 
+cd Build\
+s.h SetupEnv.bat 
+s.h .gitignore 
+git gui
+go env
+go devops 
+go scratch 
+docker ps
+go venvs 
+cd xgi
+cd xgit\
+scripts
+git log --graph
+git log --graph --decorate --oneline
+git log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+git log --graph --oneline
+execworker bash
+xgit\scripts\view.py get -v=vdavenv -b=vdavenv
+vdavenv\infr_scripts_pl\Build\SetupEnv
+vdavenv\infr_scripts_pl\Build\SetupEnv.bat 
+go venvs
+cd vdavenv\
+infr_scripts_pl\Build\SetupEnv.bat
+cd virtualenvs\vdavenv\
+s.h infr_scripts_pl\Build\SetupEnv.bat
+cd sb
+ld
+cd vda2
+cat SetupEnv 
+cat SetupEnv.bat 
+cat UseVirtualEnv.bat 
+nanu UseVirtualEnv.bat 
+nano UseVirtualEnv.bat 
+deactivate
+cd ..\..
+ls
+cd ..
+xgit\scripts\view.py get -v=swapps -b=sb/swapps
+xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv
+rm -rf sb/vdavenv && xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv
+rm -rf sb/vdavenv && xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv1
+xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv2
+cd sb\vdavenv2\
+cd infr_scripts_pl\Build\
+UseVirtualEnv.bat 
+which python
+pip freeze
+deactivate.bat 
+SetupEnv.bat 
+nano SetupEnv.bat 
+exit
+rm -rf sb/vdavenv && xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv1
+xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv2
+cd sb\vdavenv2\
+UseVirtualEnv.bat 
+which python
+pip freeze
+nano SetupEnv.bat 
+cd sb\vdavenv1\
+cd infr_scripts_pl\
+cd Build\
+cd ..\..
+cd ..
+cd swapps\
+cd infr_scripts_pl\Build\
+SetupEnv.bat 
+cd ..\..\..\..
+deactivate.bat 
+ls
+rm -rf sb
+refreshenv
+RefreshEnv
+refreshenv.cmd 
+set
+exit
+cd Build\
+cd ..\..
+cd swapps\
+cd infr_scripts_pl\Build\
+SetupEnv.bat 
+cd ..\..\..\..
+deactivate.bat 
+rm -rf sb
+refreshenv
+cd ..
+cd..
+ls
+set ZZZ=www
+
+refreshenv.bat 
+RefreshEnv
+set
+exit
+env
+goto venvs 
+ls
+goto devops 
+go2 scratch 
+go2.bat devops
+exit
+exit
+go2 envscripts 
+s.h go2.bat 
+ext
+exit
+cd ..\..
+xgit\scripts\view.py get -v=vocalfusion -b=sb/vocalfusion
+exit
+exit
+exit
+exi
+exit
+exit
+go2 ispl 
+exit
+exit
+go3 xdock
+go2 add this .
+exi
+exit
+exit
+go2 ispl 
+exit
+go3 xdock
+go2 add this .
+go2 add this that
+go2 this
+goto scratch
+go2 scratch
+popd
+go2 xdock
+go2 envscripts
+exit
+go2 venvs 
+go2 add this
+exit
+go2 home 
+exit
+go2 add this
+exit
+go2 home 
+go2 scratch 
+cd ..
+ls
+go2 add docs .
+go2 add docs2 C:\USERS
+exit
+exit
+exit
+go2 ispl 
+exit
+go3 xdock
+go2 add this .
+go2 add this that
+goto scratch
+go2 scratch
+popd
+go2 xdock
+go2 envscripts
+exit
+go2 venvs 
+go2 add this
+exit
+go2 home 
+exit
+go2 add this
+exit
+go2 home 
+go2 scratch 
+go2 add docs2 C:\USERS
+
+go2 docs
+go2 add docs C:\USERS
+go2.bat add this and
+go2 this
+echo %CD%
+go2 add docs2 .
+go2 add docs3 sjgnsejvnserv
+go2 envscripts 
+cd ..
+cd Documents\
+go2 add docs .
+go2 add docs2
+go2 add docs3
+go2 add docs
+ls
+exit
+go2 add docs
+ls
+exit
+go2 docs  
+popd
+go2 add this that
+go2 add this2 that
+go2 add this3 that
+go2 add docs
+ls
+exit
+go2 add docs
+go2 docs  
+popd
+go2 add this that
+go2 add this2 that
+go2 add this3 that
+execworker bash
+exemaste bash
+exemaster bash
+execmaster bash
+go2 xdock 
+go2 devops 
+cd Testing\
+cd xmos_docker\
+cd src\
+cd buildbot\
+ls 
+s.h buildbot_master_apps.m4 
+rlbb
+ssh swnb@animo
+c:
+C:
+C:\
+cd c:
+cd c:\
+ls
+cd "Program Files\
+go2 add pf
+cd ..
+cd "Program Files (x86)\
+go2 add pfx86
+exit
+exit
+exit
+exit
+ls
+python
+python
+cd vdavenv2\
+cd lib_dhcp\
+ls
+s.v requirements.txt
+go2.bat add this and
+go2 this
+echo %CD%
+go2 add docs2 .
+go2 add docs3 sjgnsejvnserv
+go2 envscripts 
+cd ..
+cd Documents\
+go2 add docs .
+go2 add docs2
+go2 add docs3
+go2 add docs
+ls
+exit
+go2 add docs
+ls
+exit
+go2 docs  
+popd
+go2 add this that
+go2 add this2 that
+go2 add this3 that
+go2 add docs
+ls
+exit
+go2 add docs
+go2 docs  
+popd
+go2 add this that
+go2 add this2 that
+go2 add this3 that
+execworker bash
+exemaste bash
+exemaster bash
+execmaster bash
+go2 xdock 
+go2 devops 
+cd Testing\
+cd xmos_docker\
+cd src\
+cd buildbot\
+ls 
+s.h buildbot_master_apps.m4 
+rlbb
+ssh swnb@animo
+c:
+C:
+C:\
+cd c:
+cd c:\
+ls
+cd "Program Files\
+go2 add pf
+cd "Program Files (x86)\
+go2 add pfx86
+exit
+exit
+exit
+go2 scratch 
+ls -l
+rm -rf *
+git clone git://git/xgit
+git checkout virtualenvs
+xgit\scripts\view.py get -v=vda -b=vda
+s.h git_size.py
+git_size.py
+mv venv_Scratch\git_size.py .
+xgit\scripts\view.py get -v vdavenv -b vdavenv
+rm -rf envs
+xgit\scripts\view.py get -v vdavenv -b vdavenv2
+cd infr_scripts_pl\Build\
+which python
+cmder vdavenv2
+pip freeze
+pip list django
+pip install django
+pip install django==1.10.0
+python
+cd xgit\
+git reset --hard HEAd
+git pull
+xgit\scripts\view.py update -v=vdavenv -b=vdavenv2 --strict
+cat requirements.txt 
+cat SetupEnv.bat 
+UseVirtualEnv.bat 
+ls -la
+cd ..
+cd venv_Scratch\
+cd vdavenv2\
+infr_scripts_pl\Build\SetupEnv.bat 
+ls
+cd ..\..
+cd venv_Scratch\vdavenv2\infr_scripts_pl\Build\
+set path=
+SetupEnv.bat 
+deactivate
+set
+exit
+python
+go2 add this that
+go2 add this2 that
+go2 add this3 that
+execworker bash
+exemaste bash
+exemaster bash
+execmaster bash
+go2 xdock 
+go2 devops 
+cd Testing\
+cd xmos_docker\
+cd src\
+cd buildbot\
+ls 
+s.h buildbot_master_apps.m4 
+rlbb
+ssh swnb@animo
+c:
+C:
+C:\
+cd c:
+cd c:\
+cd "Program Files\
+go2 add pf
+cd "Program Files (x86)\
+go2 add pfx86
+exit
+go2 scratch 
+cat test.m4 
+cat testing.txt 
+rm testing.txt 
+go2 venvs 
+xgit\scripts\view.py get -v=vda -b=sb/vda
+rm -rf sb/vda && xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv
+python
+rm -rf sb/vdavenv && xgit\scripts\view.py update -v=vdavenv -b=sb/vdavenv
+rm -rf sb/vdavenv && xgit\scripts\view.py update -v=vdavenv -b=sb/vdavenv --strict
+rm -rf sb/vdavenv && xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv
+xgit\scripts\view.py update -v=vdavenv -b=sb/vdavenv --strict
+cd xgit\views\
+git pull
+git merge master
+git count-objects -vH
+ls
+cd ..
+pip uninstall
+pip help uninstall
+pip freeze
+";" - requirements.txt in each repo that needs it
+exit
+pip freeze
+";" - requirements.txt in each repo that needs it
+go2 sb
+cd talkie_toaster\
+cd infr_scripts_pl\
+git reset --hard HEAD
+git pull
+xset
+exitt
+exit
+exit
+go2 sb
+cd talkie_toaster\
+xset
+set | sed "infr_scripts_pl"
+set | grep 'infr_scripts_pl'
+set
+go2 scratch 
+rm -rf infr_scripts_pl\
+gitclone infr_scripts_pl
+cmd
+ls
+subl .
+echo "echo this and that" > UseVirtualEnv.bat
+cd ..
+xset
+go2 add pfx86
+exit
+go2 scratch 
+cat test.m4 
+cat testing.txt 
+rm testing.txt 
+go2 venvs 
+xgit\scripts\view.py get -v=vda -b=sb/vda
+rm -rf sb/vda && xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv
+python
+rm -rf sb/vdavenv && xgit\scripts\view.py update -v=vdavenv -b=sb/vdavenv
+rm -rf sb/vdavenv && xgit\scripts\view.py update -v=vdavenv -b=sb/vdavenv --strict
+rm -rf sb/vdavenv && xgit\scripts\view.py get -v=vdavenv -b=sb/vdavenv
+xgit\scripts\view.py update -v=vdavenv -b=sb/vdavenv --strict
+cd xgit\views\
+git merge master
+git count-objects -vH
+pip uninstall
+pip help uninstall
+pip freeze
+";" - requirements.txt in each repo that needs it
+go2 devops
+cd virtualenvs\
+cd Testing\
+cd infr_apps\
+cd ..
+rm -rf infr_scripts_pl\
+git clone git@github.com:brennangit/infr_scripts_pl
+cd infr_scripts_pl\
+git remote add upstream git@github.com:xmos/infr_scripts_pl
+git checkout virtualenvs
+subl .
+ls
+git status
+git gui
+git pull
+git remote -v
+git log
+git checkout RELEASE_14_4
+git cherry-pick b62698c64cc8fb7b184ca713d798753a261f9387
+git cherry-pick 7859b9eafa5ecfdba5f4eab768175461469acf2c
+git checkout master
+git push
+exit
+pip install django
+pip install django==1.10.0
+python
+cd xgit\
+git reset --hard HEAd
+git pull
+xgit\scripts\view.py update -v=vdavenv -b=vdavenv2 --strict
+cat requirements.txt 
+cat SetupEnv.bat 
+UseVirtualEnv.bat 
+ls -la
+cd venv_Scratch\
+cd venv_Scratch\vdavenv2\infr_scripts_pl\Build\
+set path=
+set
+python
+xgit\scripts\\view.py get -v vdavenv -b vdavenv
+rm -rf vdavenv\
+xgit\scripts\view.py get -v vdavenv -b sb/vdavenv
+xgit\scripts\view.py get -v vdavenv -b vdavenv2 -e sb/envs
+cd xgit
+git status
+rm -rf xgit
+mkdir demo
+cd demo\
+cd vdavenv\infr_scripts_pl\Build\
+SetupEnv.bat 
+where python
+where pip
+deactivate
+cd ..\..
+cd ..
+cls
+git clone -b virtualenvs git://git/xgit
+xgit\scripts\view.py get -v vdavenv -b vdavenv
+rm -rf vdavenv\ && xgit\scripts\view.py get -v vdavenv -b vdavenv
+xgit\scripts\view.py get -v vdavenv -b vdavenv2
+cd vdavenv2\
+infr_scripts_pl\Build\SetupEnv.bat 
+cd demo\vdavenv2\infr_scripts_pl\
+cd Build\
+ls
+cat SetupEnv 
+git checkout virtualenvs
+git checkout origin/virtualenvs
+exit
+git checkout virtualenvs
+git checkout origin/virtualenvs
+xset
+which pip
+pip freeze
+python
+check_deps.py 
+graphviz
+deactivate
+pip install pygraphviz
+exit
+xgit\scripts\view.py get -v vdavenv -b sb/vdavenv
+xgit\scripts\view.py get -v vdavenv -b vdavenv2 -e sb/envs
+cd xgit
+git status
+rm -rf xgit
+mkdir demo
+cd vdavenv\infr_scripts_pl\Build\
+SetupEnv.bat 
+where python
+where pip
+deactivate
+cd ..\..
+cls
+git clone -b virtualenvs git://git/xgit
+xgit\scripts\view.py get -v vdavenv -b vdavenv
+rm -rf vdavenv\ && xgit\scripts\view.py get -v vdavenv -b vdavenv
+xgit\scripts\view.py get -v vdavenv -b vdavenv2
+cd vdavenv2\
+infr_scripts_pl\Build\SetupEnv.bat 
+cd demo\vdavenv2\infr_scripts_pl\
+cd Build\
+cat SetupEnv 
+git checkout virtualenvs
+git checkout origin/virtualenvs
+exit
+git remote 
+git remote -v
+git pull
+git diff HEAD HEAD~5 lib\python\check_lib_release_vers.py 
+git diff HEAD HEAD~25 lib\python\check_lib_release_vers.py 
+subl .
+go2 venvs
+cd demo\
+git checkout -b virtualenvs_util
+cd xgit\
+xgit\scripts\view.py get -v vdavenv -b vdavenv3
+xgit\scripts\view.py 
+xgit\scripts\view.py list
+xgit\scripts\view.py list -h
+cd envs
+cd python\
+rm -rf vdavenv\
+cd ..\...
+py -2 xgit\scripts\env.py setup -v vdavenv -b vdavenv2
+py -3 xgit\scripts\env.py setup -v vdavenv -b vdavenv2
+xgit\scripts\env.py setup -v vdavenv -b vdavenv2
+ls
+..\xgit\scripts\env.py
+cd ..
+rm envs
+rm -rf envs\
+cd vdavenv3\
+..\xgit\scripts\env.py setup
+..\xgit\scripts\env.py setup
+go2 venvs 
+cd demo\vdavenv3\
+ls
+rm -rf lib_xassert 
+rmdir /F lib_xassert 
+rmdir /a lib_xassert 
+rmdir lib_xassert 
+takeown /a lib_xassert 
+takeown lib_xassert /A
+takeown lib_xassert
+takeown /?
+takeown /f lib_xassert 
+takeown /f lib_xassert /A
+exit
+ls
+..\xgit\scripts\env.py
+cd ..
+rm envs
+rm -rf envs\
+cd vdavenv3\
+..\xgit\scripts\env.py setup
+ssh -Tv git@github.com
+git checkout virtualenv
+git checkout virtualenvs
+git checkout virtualenvs_util 
+git merge virtualenvs
+git gui
+git reset --hard head
+cd Build\
+ls
+cat SetupEnv 
+git checkout virtualenvs
+git checkout origin/virtualenvs
+exit
+git checkout virtualenvs
+git checkout origin/virtualenvs
+xset
+which pip
+pip freeze
+python
+check_deps.py 
+graphviz
+deactivate
+pip install pygraphviz
+exit
+xgit\scripts\view.py get -v vdavenv -b vdavenv2 -e sb/envs
+cd xgit
+git status
+rm -rf xgit
+mkdir demo
+where python
+where pip
+cls
+git clone -b virtualenvs git://git/xgit
+rm -rf vdavenv\ && xgit\scripts\view.py get -v vdavenv -b vdavenv
+cd vdavenv2\
+cd demo\vdavenv2\infr_scripts_pl\
+cat SetupEnv 
+git checkout origin/virtualenvs
+exit
+git remote 
+git pull
+git diff HEAD HEAD~5 lib\python\check_lib_release_vers.py 
+git diff HEAD HEAD~25 lib\python\check_lib_release_vers.py 
+subl .
+go2 venvs
+git checkout -b virtualenvs_util
+xgit\scripts\view.py 
+xgit\scripts\view.py list
+xgit\scripts\view.py list -h
+cd envs
+cd python\
+rm -rf vdavenv\
+cd ..\...
+py -2 xgit\scripts\env.py setup -v vdavenv -b vdavenv2
+py -3 xgit\scripts\env.py setup -v vdavenv -b vdavenv2
+..\xgit\scripts\env.py
+rm envs
+rm -rf envs\
+..\xgit\scripts\env.py setup
+go2 venvs 
+cd demo\
+xgit\scripts\env.py setup -b vdavenv4
+xgit\scripts\env.py setup
+xgit\scripts\env.py setup -h
+xgit\scripts\env.py setup -b sb/vdavenv4 -v vdavenv
+
+git reset --hard HEAD
+git log
+checkout virtualenvs
+cd 
+xgit\scripts\env.py setup -b vdavenv4 -v vdavenv
+cat requirements.txt 
+cat python\vdavenv\requirements.txt 
+cd demo
+cd vdavenv4\
+cat infr_scripts_pl\Build\SetupEnv.bat 
+cd infr_scripts_pl\
+git remote -v
+git remote add me git@github.com:brennangit/infr_scripts_pl
+git pull me
+git checkout me/swapps14
+git branch
+git branch -a
+git checkout me/virtualenvs
+infr_scripts_pl\Build\SetupEnv.bat 
+cd demo\vdavenv2\
+rm -rf vdavenv*
+xgit\scripts\view.py get -v vdavenv -b sb/vdavenv
+cd sb\vdavenv\infr_scripts_pl\Build\
+cat SetupEnv.bat 
+cd infr_scripts_pl\Build\
+SetupEnv.bat 
+cd ..\..
+cd xgit\
+git checkout virtualenvs
+git gui
+git checkout virtualenvs_util 
+git merge virtualenvs
+git push
+git push --set-upstream origin virtualenvs_util
+rm -rf envs\ sb\
+xgit\scripts\view.py get -v vdavenv -b vdavenv
+cd vdavenv\infr_scripts_pl\Build\
+..\..\xgit\scripts\env.py setup
+
+
+.\SetupEnv.bat 
+deactivate
+cd ..
+xgit\scripts\view.py get -v vdavenv -b vdavenv2
+xgit\scripts\view.py get -v vdavenv -b vdavenv3
+rm -rf vdavenv3\
+xgit\scripts\view.py get -v vdavenv -b vdavenv4
+xgit\scripts\env.py setup -v vdavenv -b vdavenv4
+xgit\scripts\env.py setup -v vdavenv -b vdavenv2
+ls
+rm -rf vdave*
+rmdir vdavenv3\lib_xassert 
+rmdir vdavenv3\lib_xassert /V
+rmdir /?
+rmdir vdavenv3\lib_xassert /s
+cd vdavenv3\
+cd lib_xassert 
+ls -la
+dir
+dir lib_xassert 
+dir lib_xassert lib_xassert lib_xassert 
+takeown lib_xassert 
+takeown /?
+takeown /F lib_xassert 
+takeown /F lib_xassert /A
+rlbb
+go2 ispl 
+exit
+go3 xdock
+go2 add this .
+go2 add this that
+go2 this
+goto scratch
+go2 scratch
+popd
+go2 xdock
+go2 envscripts
+exit
+go2 venvs 
+go2 add this
+exit
+go2 home 
+exit
+go2 add this
+exit
+go2 home 
+go2 scratch 
+cd ..
+ls
+go2 add docs .
+go2 add docs2 C:\USERS
+exit
+exit
+exit
+go2 ispl 
+exit
+go3 xdock
+go2 add this .
+go2 add this that
+goto scratch
+go2 scratch
+popd
+go2 xdock
+go2 envscripts
+exit
+go2 add this
+exit
+go2 home 
+exit
+go2 add this
+exit
+go2 home 
+go2 add docs2 C:\USERS
+go2 docs
+go2 add docs C:\USERS
+go2.bat add this and
+go2 this
+echo %CD%
+go2 add docs2 .
+go2 add docs3 sjgnsejvnserv
+go2 envscripts 
+cd ..
+cd Documents\
+go2 add docs .
+go2 add docs2
+go2 add docs3
+go2 add docs
+ls
+exit
+go2 add docs
+ls
+exit
+go2 docs  
+popd
+go2 add this that
+go2 add this2 that
+go2 add this3 that
+go2 add docs
+ls
+exit
+go2 add docs
+go2 docs  
+popd
+go2 add this that
+go2 add this2 that
+go2 add this3 that
+exemaste bash
+exemaster bash
+execmaster bash
+go2 xdock 
+go2 devops 
+cd Testing\
+cd xmos_docker\
+cd src\
+cd buildbot\
+ls 
+s.h buildbot_master_apps.m4 
+c:
+C:
+C:\
+cd c:
+cd c:\
+cd "Program Files\
+go2 add pf
+cd "Program Files (x86)\
+go2 add pfx86
+exit
+exit
+configure
+.\configure
+exec
+call
+call configure 
+cat configure 
+go2 venvs 
+xgit\scripts\view.py -h
+xgit\scripts\view.py show -h
+xgit\scripts\view.py show -v=vda
+xgit\scripts\view.py status
+xgit\scripts\view.py status -h
+tree
+ls sb\
+xgit\scripts\view.py status -b=sb\vocalfusion\
+xgit\scripts\view.py status -b=sb\vocalfusion\ -v=vocalfusion
+xgit\scripts\view.py get -h
+xgit\scripts\view.py update -h
+ssh swnb@vilgax
+ssh swnb@animo
+cd sb\vocalfusion\
+cd infr_scripts_pl\Build\
+SetupEnv.bat 
+deactivate
+docker ps
+cat req1.txt 
+cat req2.txt 
+py -3.6
+py -3
+py
+py -2
+s.h test2.py
+python
+test2.py
+cat reqtest.txt 
+execworker bash
+rlbb
+alias checkout git checkout
+alias checkout=git checkout
+alias
+alias /reload
+cd .
+cd ..
+cd venv_Scratch\
+gitclone infr_scripts_pl
+git clone git@github.com:brennangit/infr_scripts_pl
+cd infr_scripts_pl\
+git reset --soft HEAD~3
+git gui
+git diff HEAD HEAD~1
+git diff HEAD HEAD~2
+checkout master
+git remote add upstream git@github.com:xmos/infr_scripts_pl
+git pull upstream
+git pull upstream master
+git checkout virtualenvs
+git log
+git checkout master
+git cherry-pick b62698c64cc8fb7b184ca713d798753a261f9387
+git branch -a
+git push
+checkout RELEASE_14_4
+subl .
+git branch
+git remote -v
+git checkout origin swapps14
+git pull
+git checkout swapps14
+git checkout origin/swapps14
+git checkout upstream/swapps14
+go2 scratch 
+ls
+virtualenv conflictvenv
+cd conflictvenv\
+Scripts\activate.bat 
+pip install matplotlib
+git checkout origin swapps14
+git pull
+git checkout swapps14
+git checkout origin/swapps14
+git checkout upstream/swapps14
+go2 scratch 
+virtualenv conflictvenv
+cd conflictvenv\
+Scripts\activate.bat 
+pip install matplotlib
+rlbb
+set xgitpath=%cd%
+go2 sb 
+cd talkie_toaster\
+%xgitpath%\env.py setup
+cd infr_scripts_pl\Build\
+ls
+UseVirtualEnv.bat 
+which python
+deactivate
+cd ..\..
+%xgitpath%\env.py clean --strict
+%xgitpath%\env.py clean
+pip install matplotlib
+cd ..
+xgit\scripts\view.py get -v vdavenv -b vdavenv1
+pip install matplotlib
+cd deleteme\
+mkdir 1
+mkdir 2
+touch a.a
+touch b.b
+touch c.c
+cd 1
+touch 1.a
+touch 1.b
+touch 1.c
+ls
+rm 1.c 
+cd 2
+touch 2.a
+mkdir 2.1
+cd 2.1\
+touch 2.1.a
+touch 2.1.b
+cd ..\..
+tree
+cd ..
+tree deleteme\
+ls
+cd jirabugs\
+go2 add jirabugs .
+go2 jirabugs
+exit
+where git
