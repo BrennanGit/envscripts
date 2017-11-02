@@ -13,10 +13,6 @@ history=cat "%CMDER_ROOT%\config\.history"
 unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
-execmaster=docker exec -it buildbot_master_apps $*
-execworker=docker exec -it buildbot_worker_apps $*
-rlbb=pushd C:\Users\brennan\DevOps\Testing\xmos_docker $T docker ps -q|xargs docker rm -f $T make animo_buildbot_master_apps $T sleep 5 $T make animo_apps_buildbot_workers $T docker ps $T popd
 s.v=="%CMDER_ROOT%\vendor\Sublime Text 3\sublime_text.exe" $1 -new_console:s75V
 s.h=="%CMDER_ROOT%\vendor\Sublime Text 3\sublime_text.exe" $1 -new_console:s50H
 s.f=="%CMDER_ROOT%\vendor\Sublime Text 3\sublime_text.exe" $1 -new_console
-checkout=git checkout  
