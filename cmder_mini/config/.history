@@ -1487,3 +1487,185 @@ go2 add jirabugs .
 go2 jirabugs
 exit
 where git
+tree deleteme\
+cd jirabugs\
+go2 add jirabugs .
+go2 jirabugs
+where git
+subl .
+git pull
+pushscripts
+rm -rf .git\
+ls
+git init .
+git gui
+git remote add origin git@github.com:BrennanGit/win_env_scripts.git
+git push --set-upstream origin master
+go2 xdock 
+pullscripts
+popd
+s.h pullscripts.bat 
+git pull origin master
+s.h pushscripts.bat 
+git add .
+pushscripts.bat 
+exit
+gitclone infr_scripts_pl
+git clone git@github.com:brennangit/infr_scripts_pl
+cd infr_scripts_pl\
+git reset --soft HEAD~3
+git gui
+git diff HEAD HEAD~1
+git diff HEAD HEAD~2
+checkout master
+git remote add upstream git@github.com:xmos/infr_scripts_pl
+git pull upstream
+git pull upstream master
+git checkout virtualenvs
+git log
+git checkout master
+git cherry-pick b62698c64cc8fb7b184ca713d798753a261f9387
+git branch -a
+git push
+checkout RELEASE_14_4
+subl .
+git branch
+git remote -v
+git checkout origin swapps14
+git pull
+git checkout swapps14
+git checkout origin/swapps14
+git checkout upstream/swapps14
+go2 scratch 
+ls
+virtualenv conflictvenv
+cd conflictvenv\
+Scripts\activate.bat 
+pip install matplotlib
+git checkout origin swapps14
+git pull
+git checkout swapps14
+git checkout origin/swapps14
+git checkout upstream/swapps14
+virtualenv conflictvenv
+cd conflictvenv\
+Scripts\activate.bat 
+pip install matplotlib
+rlbb
+set xgitpath=%cd%
+go2 sb 
+cd talkie_toaster\
+%xgitpath%\env.py setup
+cd infr_scripts_pl\Build\
+ls
+UseVirtualEnv.bat 
+which python
+deactivate
+cd ..\..
+%xgitpath%\env.py clean --strict
+%xgitpath%\env.py clean
+pip install matplotlib
+cd ..
+xgit\scripts\view.py get -v vdavenv -b vdavenv1
+pip install matplotlib
+cd deleteme\
+mkdir 1
+mkdir 2
+touch a.a
+touch b.b
+touch c.c
+cd 1
+touch 1.a
+touch 1.b
+touch 1.c
+ls
+rm 1.c 
+cd 2
+touch 2.a
+mkdir 2.1
+cd 2.1\
+touch 2.1.a
+touch 2.1.b
+tree
+tree deleteme\
+ls
+cd jirabugs\
+go2 add jirabugs .
+go2 jirabugs
+exit
+where git
+tree deleteme\
+cd jirabugs\
+go2 add jirabugs .
+go2 jirabugs
+where git
+subl .
+git pull
+pushscripts
+rm -rf .git\
+git init .
+git gui
+git remote add origin git@github.com:BrennanGit/win_env_scripts.git
+git push --set-upstream origin master
+go2 xdock 
+pullscripts
+popd
+s.h pullscripts.bat 
+git pull origin master
+s.h pushscripts.bat 
+git add .
+pushscripts.bat 
+exit
+mkdir test
+getsublime.bat
+7z sublimezip.zip 
+unzip sublimezip.zip 
+unzip /?
+unzip --help
+mklnk
+ls -la
+ls ..
+mklink
+cd P
+set
+set appdata
+mklink Packages "%APPDATA%\Sublime Text 3\Packages"
+cd Packages
+cat Packages 
+cd ..\.
+del Packages 
+cd envscripts\
+rm -rf test
+cd test\
+del *
+rm -rf test\
+go2 scratch 
+echo %pkg_path%
+cd %pkg_path%
+cd C:\Users\brennan\envscripts\cmder_mini\vendor\Sublime Text 3\
+cd ..\..\..
+cd %appdata%
+echo %appdata%
+go2 envscripts 
+cd cmder_mini\vendor\
+cd "Sublime Text 3\
+dir Data\
+dir Packages\
+cd vendor\
+diff "Sublime Text 3\" "Sublime Text 3.bak\"
+diff "Sublime Text 3\*" "Sublime Text 3.bak\*"
+cd "Sublime Text 3.bak\
+cd Data\
+cd "Installed Packages\
+cd ..\Data\
+cd Packages\
+ls
+dir User\
+cd ..
+la
+dir
+dir "Installed Packages\
+getsublime.bat 
+s.h
+cd ..\..
+cls
