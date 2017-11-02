@@ -1,6 +1,4 @@
 go2targets.bat
-
 */vendor/Sublime Text 3/*
-*/vendor/conemu-maximus5/ConEmu.xml
-*/config/.history
-*/config/user-ConEmu.xml
+*ConEmu.xml
+*.history
