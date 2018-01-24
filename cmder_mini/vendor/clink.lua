@@ -30,11 +30,16 @@ function set_prompt_filter()
     -- environment systems like pythons virtualenv change the PROMPT and usually
     -- set some variable. But the variables are differently named and we would never
     -- get them all, so try to parse the env name out of the PROMPT.
+    -- however since pipenv doesn't alter the prompt, we will first check if VIRTUAL_ENV is defined
     -- envs are usually put in round or square parentheses and before the old prompt
-    local env = old_prompt:match('.*%(([^%)]+)%).+:')
+    
+    local env = os.getenv('VIRTUAL_ENV')
+    if env ~= nil then env = env:match(".-([^\\]-)$") end
+
+    if env == nil then env = old_prompt:match('.*%(([^%)]+)%).+:') end
     -- also check for square brackets
     if env == nil then env = old_prompt:match('.*%[([^%]]+)%].+:') end
-    
+
     -- build our own prompt
     -- orig: $E[1;32;40m$P$S{git}{hg}$S$_$E[1;30;40m{lamb}$S$E[0m
     -- color codes: "\x1b[1;37;40m"
