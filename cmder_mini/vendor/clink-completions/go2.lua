@@ -10,7 +10,7 @@ function lines_from(file)
 end
 
 local path_to_here = debug.getinfo(1).source:match("@?(.*/)")
-local script = string.format("%s../../../go2targets.bat", path_to_here)
+local script = string.format("%s../../../go2targets/base.bat", path_to_here)
 local lines = lines_from(script)
 local targets = {}
 for i, line in ipairs(lines) do

@@ -26,6 +26,7 @@ function set_prompt_filter()
     local old_prompt = clink.prompt.value
     local cwd = old_prompt:match('.*(.:[^>]*)>')
     if cwd == nil then cwd = clink.get_cwd() end
+    cwd = cwd:gsub(" ", "|")
     
     -- environment systems like pythons virtualenv change the PROMPT and usually
     -- set some variable. But the variables are differently named and we would never
