@@ -1,6 +1,6 @@
 @echo off
 SET VAR=
-SET HERE=C:/Users/Brennan/envscripts
+SET HERE=%~dp0
 REM start /WAIT C:\msys64\usr\bin\bash.exe -c "fuzzyD.sh %* > %HERE%/fd_dir.txt ; exit"
 C:\msys64\usr\bin\bash.exe -c "fuzzyD.sh %* > %HERE%/fd_dir.txt"
 
