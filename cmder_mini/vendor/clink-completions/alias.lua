@@ -9,12 +9,12 @@ function lines_from(file)
   return lines
 end
 
-function bats_from(directory)
+function cmds_from(directory)
     local i, t, popen = 0, {}, io.popen
     for filename in io.popen('dir "'..directory..'" /b'):lines() do
         i = i + 1
-        if string.match(filename, '.bat') then
-            filename = filename:gsub(".bat", "")
+        if string.match(filename, '.cmd') then
+            filename = filename:gsub(".cmd", "")
             t[i] = filename
         end
     end
@@ -22,8 +22,8 @@ function bats_from(directory)
 end
 
 local path_to_here = debug.getinfo(1).source:match("@?(.*/)")
-local dir = string.format("%s../../..", path_to_here)
-local files = bats_from(dir)
+local dir = string.format("%s../../../aliases", path_to_here)
+local files = cmds_from(dir)
 local targets = {}
 for i, line in ipairs(files) do
     table.insert(targets, line)
@@ -32,4 +32,4 @@ end
 local alias_parser = parser(targets)
 
 clink.arg.register_parser("alias", alias_parser)
-clink.arg.register_parser("alias.bat", alias_parser)
+clink.arg.register_parser("alias.cmd", alias_parser)

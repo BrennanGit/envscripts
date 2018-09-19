@@ -1,8 +1,9 @@
 @echo off
 SET VAR=
 SET HERE=%~dp0
+SET HERE=%HERE:\=/%
 REM start /WAIT C:\msys64\usr\bin\bash.exe -c "fuzzyD.sh %* > %HERE%/fd_dir.txt ; exit"
-C:\msys64\usr\bin\bash.exe -c "fuzzyD.sh %* > %HERE%/fd_dir.txt"
+C:\msys64\usr\bin\bash.exe -c "%HERE%/fd/fuzzyD.sh %* > %HERE%/fd/fd_dir.txt"
 
 
 rem :WAITLOOP
@@ -18,7 +19,7 @@ rem :NOTRUNNING
 rem timeout 5
 
 
-TYPE  %~dp0\fd_dir.txt
-FOR /f "tokens=* USEBACKQ" %%x in (`TYPE  %~dp0\fd_dir.txt`) do SET "VAR=%%x"
-DEL /Q %~dp0\fd_dir.txt
+TYPE %~dp0\fd\fd_dir.txt
+FOR /f "tokens=* USEBACKQ" %%x in (`TYPE  %~dp0\fd\fd_dir.txt`) do SET "VAR=%%x"
+DEL /Q %~dp0\fd\fd_dir.txt
 CD %VAR%

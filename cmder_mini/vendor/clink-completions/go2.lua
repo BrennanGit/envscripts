@@ -10,7 +10,7 @@ function lines_from(file)
 end
 
 local path_to_here = debug.getinfo(1).source:match("@?(.*/)")
-local script = string.format("%s../../../go2targets/base.bat", path_to_here)
+local script = string.format("%s../../../go2targets/base.cmd", path_to_here)
 local lines = lines_from(script)
 local targets = {}
 for i, line in ipairs(lines) do
@@ -23,4 +23,4 @@ local go2_parser = parser(targets)
 
 
 clink.arg.register_parser("go2", go2_parser)
-clink.arg.register_parser("go2.bat", go2_parser)
+clink.arg.register_parser("go2.cmd", go2_parser)

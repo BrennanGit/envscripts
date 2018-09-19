@@ -4,9 +4,8 @@ set addname=%2
 set addpath=
 REM capture paths with spaces
 for /f "tokens=2,* delims= " %%a in ("%*") do set addpath=%%b
-
 CALL :%1 2>NUL
-CALL %~dp0\go2targets\%TARGETS%.bat %1 2>NUL
+CALL %~dp0\go2targets\%TARGETS%.cmd %1 2>NUL
 EXIT /B
 
 :add
