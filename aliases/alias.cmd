@@ -1,5 +1,3 @@
-:: asdvjhbsdv
-
 @echo off
 SetLocal EnableDelayedExpansion
 
@@ -42,8 +40,18 @@ goto :eof
 if exist "%~dp0%name%.cmd" (
     echo Alias "%name%" already exists, remove with "alias --rm %name%"
     goto :eof)
+for /F "tokens=1,*" %%a IN ("%cmd%") do (
+    set args=%%b
+    for /F "tokens=* USEBACKQ" %%c IN (`where %%a`) do (
+        set exe="%%c"
+        goto WRITE
+    )
+    set exe=%%a
+)
+
+:WRITE
 echo @echo off> "%~dp0%name%.cmd"
-echo %cmd% %%*>> "%~dp0%name%.cmd"
+echo %exe% %args% %%*>> "%~dp0%name%.cmd"
 echo Alias set:
-echo %name%          %cmd%
+echo %name%          %exe% %args%
 goto :eof
