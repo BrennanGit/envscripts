@@ -73,3 +73,6 @@ EXIT /B
 :xpm
 pushd "C:\Users\brennan\.xpm"
 EXIT /B
+:aliases
+pushd "C:\Users\brennan\envscripts\aliases"
+EXIT /B

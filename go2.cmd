@@ -34,11 +34,11 @@ set addpath=%CD%
 GOTO _write
 
 :_write
-echo :%addname%>>%~dp0\go2targets\%TARGETS%.bat
-echo pushd "%addpath%">>%~dp0\go2targets\%TARGETS%.bat
+echo :%addname%>>%~dp0\go2targets\%TARGETS%.cmd
+echo pushd "%addpath%">>%~dp0\go2targets\%TARGETS%.cmd
 GOTO _addend
 
 :_addend
-echo EXIT /B>>%~dp0\go2targets\%TARGETS%.bat
+echo EXIT /B>>%~dp0\go2targets\%TARGETS%.cmd
 echo Added to targets: %addname% - %addpath%
 EXIT /B
