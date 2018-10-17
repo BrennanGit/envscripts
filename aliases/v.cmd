@@ -1,2 +1,2 @@
 @echo off
-vagrant %*
+"C:\HashiCorp\Vagrant\bin\vagrant.exe"  %*

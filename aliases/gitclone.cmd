@@ -9,7 +9,7 @@ if %1==xgit (
 	cd ..
 	GOTO END
 )
-
+ 
 if %1==autobuild (
 	git clone git://git/autobuild
 	cd autobuild
@@ -18,16 +18,7 @@ if %1==autobuild (
 	)
 	GOTO END
 )
-
-if %1==swdb (
-	git clone git://git/swdb
-	cd swdb
-	if not "%2"=="" (
-		git checkout %2
-	)
-	GOTO END
-)
-
+ 
 set GITUSER=brennangit
 set GITREPO=%1
 if not "%2"=="" (
@@ -37,13 +28,13 @@ if not "%2"=="" (
 if not "%3"=="" (
 	set GITBRANCH=%3
 )
-
+ 
 git clone git@github.com:%GITUSER%/%GITREPO%
 if %errorlevel%==0 (
 	cd %GITREPO%
 	git remote add upstream git@github.com:xmos/%GITREPO%
 ) 
-
+ 
 if %errorlevel%==128 (
 	git clone git@github.com:xmos/%GITREPO%
 	cd %GITREPO%
@@ -51,9 +42,9 @@ if %errorlevel%==128 (
 echo(
 echo(
 git remote -v
-
+ 
 if not '%GITBRANCH%'=='' (
 	git checkout %GITBRANCH%
 )
-
+ 
 :END
