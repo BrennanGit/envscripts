@@ -1,2 +1,2 @@
-@echo off
-"C:\Program Files (x86)\Git\usr\bin\echo.exe" %~s1 %*
+@ECHO OFF
+if '%1'=='' (%0 .) else echo %~s1
