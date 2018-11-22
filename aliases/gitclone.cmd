@@ -1,50 +1,64 @@
 @echo off
-call start-ssh-agent.cmd
-if %1==xgit (
-	git clone git://git/xgit
-	cd xgit
-	if not "%2"=="" (
-		git checkout %2
-	)
-	cd ..
-	GOTO END
-)
- 
-if %1==autobuild (
-	git clone git://git/autobuild
-	cd autobuild
-	if not "%2"=="" (
-		git checkout %2
-	)
-	GOTO END
-)
  
 set GITUSER=brennangit
-set GITREPO=%1
-if not "%2"=="" (
-	set GITUSER=%1
-	set GITREPO=%2
-)
-if not "%3"=="" (
-	set GITBRANCH=%3
-)
+set GITBRANCH=
  
-git clone git@github.com:%GITUSER%/%GITREPO%
+if "%1"=="--help" (goto USAGE)
+if "%1"=="-h" (goto USAGE)
+if "%1"=="-u" (
+	set GITUSER=%2
+	shift
+	shift
+)
+if "%1"=="" (goto USAGE)
+set GITREPO=%1
+if not "%2"=="" (set GITBRANCH=%2)
+goto CHECKS
+ 
+:USAGE
+echo Clone a git repo with priority (github fork ^> xmos github ^> gitweb)
+echo usage:
+echo   gitclone REPO         - Attempt to clone repo from each of the sources
+echo   gitclone REPO REF     - Clone the repo and checkout REF
+echo   gitclone -u USER REPO - Choose the github user to search for forks (default %GITUSER%)
+echo   gitclone [-h^|--help]  - Show this help message
+goto :eof
+ 
+:CHECKS
+if exist "%GITREPO%" (echo - "%GITREPO%" already exists in "%CD%" && goto :eof)
+ 
+:FORK
+echo - Trying fork (git@github.com:%GITUSER%/%GITREPO%) ...
+git clone git@github.com:%GITUSER%/%GITREPO% 2>NUL
 if %errorlevel%==0 (
 	cd %GITREPO%
 	git remote add upstream git@github.com:xmos/%GITREPO%
-) 
- 
-if %errorlevel%==128 (
-	git clone git@github.com:xmos/%GITREPO%
-	cd %GITREPO%
+	cd ..
 )
-echo(
-echo(
+if %errorlevel%==0 (goto CHECKOUT)
+ 
+:XMOS
+echo - Trying xmos (git@github.com:xmos/%GITREPO%) ...
+git clone git@github.com:xmos/%GITREPO% 2>NUL
+if %errorlevel%==0 (goto CHECKOUT)
+ 
+:GITWEB
+echo - Trying gitweb (git://git/%GITREPO%) ...
+git clone git://git/%GITREPO% 2>NUL
+if not %errorlevel%==0 (goto FAIL)
+  
+:CHECKOUT
+cd %GITREPO%
+if not "%GITBRANCH%"=="" (
+	echo - Checking out %GITBRANCH% ...
+	git checkout %GITBRANCH% 2>NUL
+)
+ 
+:SHOW
 git remote -v
+cd ..
+goto :eof
  
-if not '%GITBRANCH%'=='' (
-	git checkout %GITBRANCH%
-)
- 
-:END
+:FAIL
+echo - Unable to find the repo ...
+exit /B 1
