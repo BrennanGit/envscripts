@@ -29,7 +29,11 @@ for i, line in ipairs(files) do
     table.insert(targets, line)
 end
 
-local alias_parser = parser(targets)
+local alias_parser = parser({
+    "--edit" .. parser(targets),
+    "--rm" .. parser(targets),
+    {targets},
+    }, "-h", "--help")
 
 clink.arg.register_parser("alias", alias_parser)
 clink.arg.register_parser("alias.cmd", alias_parser)
