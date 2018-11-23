@@ -3,12 +3,14 @@ setlocal enabledelayedexpansion
  
 set scratch=C:\Users\brennan\OneDrive - Xmos\Documents\Scratch
 set sb=C:\Users\brennan\sb
+set alias=C:\Users\brennan\envscripts\aliases
  
 if "%1"=="" (goto USAGE)
 if "%1"=="--help" (goto USAGE)
 if "%1"=="-h" (goto USAGE)
 if "%2"=="" (goto REPO)
 if "%1"=="sb" (goto SANDBOX)
+if "%1"=="alias" (goto ALIAS)
  
 :USAGE
 echo Open up a folder in an editor (%editor%)
@@ -20,6 +22,7 @@ goto :eof
 
 :REPO
     set DIR=%1
+    IF %DIR:~-1%==\ SET DIR=%DIR:~0,-1%
     echo - Searching for %DIR% in pwd...
     if exist "%DIR%" (goto EDIT)
     echo - Searching for %DIR% in scratch...
@@ -41,6 +44,14 @@ goto :eof
     if not exist "%DIR%" (
         view.py get -v %DIR% -b %DIR%
     )
+    goto EDIT
+goto :eof
+
+:ALIAS
+    if "%2"=="" (goto USAGE)
+    set DIR=%2.cmd
+    echo Searching for %DIR% in aliases
+    pushd "%alias%"
     goto EDIT
 goto :eof
  
