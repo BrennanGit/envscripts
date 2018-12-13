@@ -15,13 +15,15 @@ if "%1"=="alias" (goto ALIAS)
 :USAGE
 echo Open up a folder in an editor (%editor%)
 echo usage:
-echo   edit REPO        - Find repo in the pwd or scratch, if not found clone into scratch
-echo   edit sb SBNAME   - Find a sandbox in sb, if not found view.py get it
-echo   edit [-h^|--help] - Show this help message
+echo   edit REPO         - Find repo in the pwd or scratch, if not found clone into scratch
+echo   edit sb SBNAME    - Find a sandbox in sb, if not found view.py get it
+echo   edit alias SBNAME - Find an alias in aliases
+echo   edit [-h^|--help]  - Show this help message
 goto :eof
 
 :REPO
     set DIR=%1
+    set "DIR=%DIR:@=" & set "REF=%"
     IF %DIR:~-1%==\ SET DIR=%DIR:~0,-1%
     echo - Searching for %DIR% in pwd...
     if exist "%DIR%" (goto EDIT)
@@ -31,7 +33,11 @@ goto :eof
         echo - Searching for %DIR% with git...
         call gitclone %DIR%
         if not !errorlevel!==0 (goto :eof)
-        popd
+    )
+    if not "%REF%"=="" (
+        cd %DIR%
+        git checkout %REF%
+        cd ..
     )
     goto EDIT
 goto :eof
@@ -58,4 +64,5 @@ goto :eof
 :EDIT
 echo - Found at %CD%\%DIR%
 %EDITOR% "%DIR%"
+popd
 goto :eof
