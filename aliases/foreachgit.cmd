@@ -1,3 +1,3 @@
 @echo off
 
-call foreachd.bat if exist .git (%*)
+call foreachd if exist .git (%*)
