@@ -1,2 +1,3 @@
 @echo off
-"C:\Users\brennan\envscripts\aliases\v.cmd" global-status %*
+REM vagrant global-status
+"C:\HashiCorp\Vagrant\bin\vagrant.exe" global-status %*

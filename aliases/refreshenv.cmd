@@ -1,4 +1,5 @@
 @echo off
+REM Reload environment variables from registry
 ::
 :: RefreshEnv.cmd
 ::

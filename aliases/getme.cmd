@@ -1,5 +1,5 @@
 @echo off
-
+REM Select an executable to run when multiple exist on the path
 setlocal enableextensions enabledelayedexpansion
 
 if "%1"=="" goto USAGE

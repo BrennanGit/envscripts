@@ -1,2 +1,3 @@
 @echo off
-python -m SimpleHTTPServer %1
+REM python -m SimpleHTTPServer
+"C:\Python27\python.exe" -m SimpleHTTPServer %*

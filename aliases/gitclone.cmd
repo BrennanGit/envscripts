@@ -1,6 +1,7 @@
 @echo off
- 
+REM Attempt to clone from all the standard places
 set GITUSER=brennangit
+set GITENTUSER=brennan
 set GITBRANCH=
  
 if "%1"=="--help" (goto USAGE)
@@ -36,10 +37,21 @@ if %errorlevel%==0 (
 	cd ..
 )
 if %errorlevel%==0 (goto CHECKOUT)
+echo - Trying fork (git@srv-bri-github0.xmos.local:%GITENTUSER%/%GITREPO%) ...
+git clone git@srv-bri-github0.xmos.local:%GITENTUSER%/%GITREPO% 2>NUL
+if %errorlevel%==0 (
+    cd %GITREPO%
+    git remote add upstream git@srv-bri-github0.xmos.local:xmos/%GITREPO%
+    cd ..
+)
+if %errorlevel%==0 (goto CHECKOUT)
  
 :XMOS
 echo - Trying xmos (git@github.com:xmos/%GITREPO%) ...
 git clone git@github.com:xmos/%GITREPO% 2>NUL
+if %errorlevel%==0 (goto CHECKOUT)
+echo - Trying xmos (git@srv-bri-github0.xmos.local:xmos/%GITREPO%) ...
+git clone git@srv-bri-github0.xmos.local:xmos/%GITREPO% 2>NUL
 if %errorlevel%==0 (goto CHECKOUT)
  
 :GITWEB
@@ -61,4 +73,6 @@ goto :eof
  
 :FAIL
 echo - Unable to find the repo ...
+echo - Did you mean?
+call get_all_repos | xargs fuzzy_order.py -n 3 %GITREPO% | xargs -L 1 echo -- 
 exit /B 1
