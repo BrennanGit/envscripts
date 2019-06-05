@@ -4,7 +4,7 @@ set MAX_DEPTH=4
 set cwd=%cd%
  
 :LOOP
-if %MAX_DEPTH%==0 GOTO END
+if %MAX_DEPTH%==0 echo infr_scripts_pl not found && GOTO END
 if exist "infr_scripts_pl\" GOTO FOUND
 cd ..
 set /A MAX_DEPTH=MAX_DEPTH-1
