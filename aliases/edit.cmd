@@ -1,14 +1,12 @@
 @echo off
 setlocal enabledelayedexpansion
  
-set scratch=C:\Users\brennan\OneDrive - Xmos\Documents\Scratch
-set sb=C:\Users\brennan\sb
-set alias=C:\Users\brennan\envscripts\aliases
+call %~dp0\..\set_dir_vars.cmd
  
 if "%1"=="" (goto USAGE)
 if "%1"=="--help" (goto USAGE)
 if "%1"=="-h" (goto USAGE)
-if "%2"=="" (goto REPO)
+if "%2"=="" (goto PREREPO)
 if "%1"=="sb" (goto SANDBOX)
 if "%1"=="alias" (goto ALIAS)
  
@@ -21,17 +19,35 @@ echo   edit alias SBNAME - Find an alias in aliases
 echo   edit [-h^|--help]  - Show this help message
 goto :eof
 
-:REPO
+:PREREPO
+    set BARE=0
     set DIR=%1
+    if not x%DIR:https=%==x%DIR% (goto BARE)
+    if not x%DIR:git@=%==x%DIR% (goto BARE)
+    goto REPO
+
+:BARE
+    set BARE=1
+    for /f "delims=" %%i in ("%DIR:.git=%") do set "REPONAME=%%~nxi"
+    set REPO=%DIR%
+    set DIR=%REPONAME%
+    set REPONAME=
+
+:REPO
     set "DIR=%DIR:@=" & set "REF=%"
     IF %DIR:~-1%==\ SET DIR=%DIR:~0,-1%
     echo - Searching for %DIR% in pwd...
     if exist "%DIR%" (goto EDIT)
+    echo - Searching for %DIR% in home...
+    pushd "%home%"
+    if exist "%DIR%" (goto EDIT)
+    popd
     echo - Searching for %DIR% in scratch...
     pushd "%scratch%"
     if not exist "%DIR%" (
         echo - Searching for %DIR% with git...
-        call gitclone %DIR%
+        if "%BARE%"=="0" (call gitclone %DIR%)
+        if "%BARE%"=="1" (call gitclone %REPO%)
         if not !errorlevel!==0 (goto :eof)
     )
     if not "%REF%"=="" (

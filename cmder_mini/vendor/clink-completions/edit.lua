@@ -1,6 +1,7 @@
 local matchers = require('matchers')
 local parser = clink.arg.new_parser
 
+local home_dir = "C:\\Users\\brennan"
 local scratch_dir = "C:\\Users\\brennan\\OneDrive - Xmos\\Documents\\Scratch"
 local sb_dir = "C:\\Users\\brennan\\sb"
 
@@ -41,14 +42,16 @@ end
 
 local sandboxes = scandir(sb_dir)
 local scratch_dirs = scandir(scratch_dir)
+local home_dirs = scandir(home_dir)
 local pwd_dirs = matchers.dirs
 local aliases = alias_list()
 
 local edit_parser = parser({
     "sb" .. parser({sandboxes}),
     "alias" .. parser({aliases}),
-    {scratch_dirs},
-    {pwd_dirs},
+    scratch_dirs,
+    pwd_dirs,
+    home_dirs,
     }, "-h", "--help")
 
 
