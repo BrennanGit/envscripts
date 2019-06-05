@@ -46,7 +46,7 @@ for %%a in ("%~dp0*.cmd") do (
     if "%PADAVAIL%"=="1" (
         call pad -f "-" 25 ": " "* !NAME! "
         if "!LINE:~0,3!"=="REM" (
-            echo !LINE:REM=!
+            echo !LINE:~4!
         ) else (
             echo.
         )
