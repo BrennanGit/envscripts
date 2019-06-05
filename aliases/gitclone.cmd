@@ -1,9 +1,9 @@
 @echo off
 REM Attempt to clone from all the standard places
-set GITUSER=brennangit
+set GITUSER=BrennanGit
 set GITENTUSER=brennan
 set GITBRANCH=
- 
+
 if "%1"=="--help" (goto USAGE)
 if "%1"=="-h" (goto USAGE)
 if "%1"=="-u" (
@@ -14,6 +14,8 @@ if "%1"=="-u" (
 if "%1"=="" (goto USAGE)
 set GITREPO=%1
 if not "%2"=="" (set GITBRANCH=%2)
+if not x%GITREPO:https=%==x%GITREPO% (goto BARE)
+if not x%GITREPO:git@=%==x%GITREPO% (goto BARE)
 goto CHECKS
  
 :USAGE
@@ -24,10 +26,18 @@ echo   gitclone REPO REF     - Clone the repo and checkout REF
 echo   gitclone -u USER REPO - Choose the github user to search for forks (default %GITUSER%)
 echo   gitclone [-h^|--help]  - Show this help message
 goto :eof
+
+:BARE
+echo - Cloning bare repo url ...
+git clone %GITREPO% 2>NUL
+for /f "delims=" %%i in ("%GITREPO:.git=%") do set "REPONAME=%%~nxi"
+set GITREPO=%REPONAME%
+if %errorlevel%==0 (goto CHECKOUT)
+goto :eof
  
 :CHECKS
 if exist "%GITREPO%" (echo - "%GITREPO%" already exists in "%CD%" && goto :eof)
- 
+
 :FORK
 echo - Trying fork (git@github.com:%GITUSER%/%GITREPO%) ...
 git clone git@github.com:%GITUSER%/%GITREPO% 2>NUL
@@ -74,5 +84,7 @@ goto :eof
 :FAIL
 echo - Unable to find the repo ...
 echo - Did you mean?
-call get_all_repos | xargs fuzzy_order.py -n 3 %GITREPO% | xargs -L 1 echo -- 
+set PIPENV_PIPFILE=C:\Users\brennan\envscripts\Pipfile
+call get_all_repos | xargs pipenv run fuzzy_order.py -n 4 %GITREPO% | xargs -L 1 echo -- 
+set PIPENV_PIPFILE=
 exit /B 1
