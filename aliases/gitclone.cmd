@@ -44,6 +44,7 @@ git clone git@github.com:%GITUSER%/%GITREPO% 2>NUL
 if %errorlevel%==0 (
 	cd %GITREPO%
 	git remote add upstream git@github.com:xmos/%GITREPO%
+    git fetch upstream
 	cd ..
 )
 if %errorlevel%==0 (goto CHECKOUT)
@@ -52,6 +53,7 @@ git clone git@srv-bri-github0.xmos.local:%GITENTUSER%/%GITREPO% 2>NUL
 if %errorlevel%==0 (
     cd %GITREPO%
     git remote add upstream git@srv-bri-github0.xmos.local:xmos/%GITREPO%
+    git fetch upstream
     cd ..
 )
 if %errorlevel%==0 (goto CHECKOUT)
