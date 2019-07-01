@@ -79,6 +79,6 @@ goto :eof
  
 :EDIT
 echo - Found at %CD%\%DIR%
-%EDITOR% "%DIR%"
+"%EDITOR%" "%DIR%"
 popd
 goto :eof
