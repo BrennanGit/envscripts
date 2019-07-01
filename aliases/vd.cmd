@@ -1,3 +1,3 @@
 @echo off
 REM vagrant destroy -f
-"C:\HashiCorp\Vagrant\bin\vagrant.exe" destroy -f %*
+getme --exclude cmd vagrant 1 destroy -f %*

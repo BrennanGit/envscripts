@@ -1,3 +1,3 @@
 @echo off
 REM vagrant box update
-"C:\HashiCorp\Vagrant\bin\vagrant.exe" box update %*
+getme --exclude cmd vagrant 1 box update %*

@@ -1,3 +1,3 @@
 @echo off
 REM grep --color
-C:\PROGRA~2\Git\usr\bin\grep.exe --color %*
+getme --exclude cmd grep 1 --color %*

@@ -1,3 +1,3 @@
 @echo off
 REM vagrant destroy -f && vagrant up
-"C:\HashiCorp\Vagrant\bin\vagrant.exe" destroy -f && "C:\HashiCorp\Vagrant\bin\vagrant.exe" up
+getme --exclude cmd vagrant 1 destroy -f && getme --exclude cmd vagrant 1 up

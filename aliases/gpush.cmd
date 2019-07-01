@@ -1,6 +1,6 @@
 @echo off
 REM git push
-"C:\Program Files (x86)\Git\cmd\git.exe" push %*
+getme --exclude cmd git 1 push %*
 if %errorlevel%==0 (goto :eof)
 
 echo Attempting to set upstream branch

@@ -1,3 +1,3 @@
 @echo off
 REM git status
-"C:\Program Files (x86)\Git\cmd\git.exe" status %*
+getme --exclude cmd git 1 status %*

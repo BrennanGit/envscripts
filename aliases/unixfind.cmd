@@ -1,2 +1,2 @@
 @echo off
-C:\MinGW\msys\1.0\bin\find.exe %*
+getme --exclude cmd find 2 %*

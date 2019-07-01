@@ -1,3 +1,3 @@
 @echo off
 REM pipenv run
-"C:\Python37\Scripts\pipenv.exe" run %*
+getme --exclude cmd pipenv 1 run %*

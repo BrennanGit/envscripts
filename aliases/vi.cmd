@@ -1,3 +1,3 @@
 @echo off
 REM vim
-"C:\Program Files (x86)\Git\usr\bin\vim.exe"  %*
+getme --exclude cmd vim 1 %*

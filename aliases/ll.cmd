@@ -1,3 +1,3 @@
 @echo off
-REM ls -la
-"C:\Users\brennan\envscripts\aliases\ls.cmd" -lah %*
+REM ls -lh
+getme ls 1 -lh %*

@@ -2,4 +2,4 @@
 REM python -m SimpleHTTPServer
 echo Actual IP:
 route PRINT 0.0.0.0 | findstr 0.0.0.0 | awk '{print $4};'
-"C:\Python27\python.exe" -m SimpleHTTPServer %*
+getme --exclude cmd python 1 -m SimpleHTTPServer %*

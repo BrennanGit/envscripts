@@ -93,10 +93,6 @@ if exist "%~dp0%name%.cmd" (
 )
 for /F "tokens=1,*" %%a IN ("%cmd%") do (
     set args=%%b
-    for /F "tokens=* USEBACKQ" %%c IN (`where %%a`) do (
-        set exe="%%c"
-        goto WRITE
-    )
     set exe=%%a
 )
  
@@ -108,7 +104,7 @@ if "%DESCRIPTION%"=="1" (
 ) else (
     echo REM %cmd%>> "%~dp0%name%.cmd"
 )
-echo %exe% %args% %%*>> "%~dp0%name%.cmd"
+echo getme --exclude cmd %exe% 1 %args% %%*>> "%~dp0%name%.cmd"
 echo Alias set:
 echo %name%          %exe% %args%
 goto :eof

@@ -1,3 +1,3 @@
 @echo off
 REM vagrant
-"C:\HashiCorp\Vagrant\bin\vagrant.exe"  %*
+getme --exclude cmd vagrant 1  %*
