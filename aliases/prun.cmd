@@ -1,3 +1,3 @@
 @echo off
 REM pipenv run
-getme --exclude cmd pipenv 1 run %*
+getme --exclude envscripts pipenv 1 run %*

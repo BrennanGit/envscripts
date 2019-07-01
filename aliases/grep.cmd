@@ -1,3 +1,3 @@
 @echo off
 REM grep --color
-getme --exclude cmd grep 1 --color %*
+getme --exclude envscripts grep 1 --color %*

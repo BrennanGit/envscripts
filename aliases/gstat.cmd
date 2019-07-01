@@ -1,3 +1,3 @@
 @echo off
 REM git status
-getme --exclude cmd git 1 status %*
+getme --exclude envscripts git 1 status %*

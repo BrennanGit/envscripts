@@ -1,3 +1,3 @@
 @echo off
 REM git checkout
-getme --exclude cmd git 1 checkout %*
+getme --exclude envscripts git 1 checkout %*

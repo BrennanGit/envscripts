@@ -1,3 +1,3 @@
 @echo off
 REM vim
-getme --exclude cmd vim 1 %*
+getme --exclude envscripts vim 1 %*

@@ -1,3 +1,3 @@
 @echo off
 REM vagrant
-getme --exclude cmd vagrant 1  %*
+getme --exclude envscripts vagrant 1  %*
