@@ -1,39 +1,4 @@
 @echo off
-REM REM Select an executable to run when multiple exist on the path
-REM setlocal enableextensions enabledelayedexpansion
-
-REM if "%1"=="" goto USAGE
-REM if "%2"=="" goto LOOP
-
-REM for /f "tokens=2,* delims= " %%a in ("%*") do set ARGS=%%b
-
-REM :LOOP
-REM set /a count = 1
-REM for /f "tokens=* delims= " %%a in ('where %1') do (
-REM     if "%2"=="" (
-REM         echo !count!: %%a
-REM     ) else (
-REM         if "!count!"=="%2" (
-REM             set CMD=%%a
-REM             goto RUN
-REM         )
-REM     )
-REM     set /a count += 1
-REM )
-REM goto :EOF
-
-REM :RUN
-REM "%CMD%" %ARGS%
-REM goto :EOF
-
-REM :USAGE
-REM echo usage:
-REM echo   getme CMD            - Print all available binaries with numbers
-REM echo   getme CMD NUM [ARGS] - Select binary and run with ARGS
-REM goto :eof
-
-
-@echo off
 REM Select an executable to run when multiple exist on the path
 setlocal enableextensions enabledelayedexpansion
 
@@ -80,12 +45,13 @@ for /f "tokens=* delims= " %%a in ('where %_find%') do (
 )
 goto :EOF
 
-:RUN
-"%CMD%" %ARGS%
-goto :EOF
-
 :USAGE
 echo usage:
 echo   getme CMD            - Print all available binaries with numbers
 echo   getme CMD NUM [ARGS] - Select binary and run with ARGS
 goto :eof
+
+
+:RUN
+"%CMD%" %ARGS%
+exit /b %ERRORLEVEL%

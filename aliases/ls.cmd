@@ -1,3 +1,3 @@
 @echo off
 REM ls --color
-getme --exclude envscripts ls 1 -a --color %*
+call getme --exclude envscripts ls 1 -a --color %*

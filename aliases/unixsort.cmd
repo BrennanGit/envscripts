@@ -1,2 +1,2 @@
 @echo off
-getme --exclude envscripts sort 2 %*
+call getme --exclude envscripts sort 2 %*
