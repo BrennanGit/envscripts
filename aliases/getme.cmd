@@ -33,7 +33,7 @@ REM echo   getme CMD NUM [ARGS] - Select binary and run with ARGS
 REM goto :eof
 
 
-@echo off
+@echo on
 REM Select an executable to run when multiple exist on the path
 setlocal enableextensions enabledelayedexpansion
 
@@ -58,6 +58,8 @@ if "%1"=="--exclude" (
     )
 )
 
+set "_args=%_args:"=""%"
+
 if not "%2"=="" (
     for /f "tokens=2,* delims= " %%a in ("%_args%") do set ARGS=%%b
 )
@@ -81,7 +83,7 @@ for /f "tokens=* delims= " %%a in ('where %_find%') do (
 goto :EOF
 
 :RUN
-"%CMD%" %ARGS%
+"%CMD%" %ARGS:""="%
 goto :EOF
 
 :USAGE
