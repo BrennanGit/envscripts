@@ -104,7 +104,7 @@ if "%DESCRIPTION%"=="1" (
 ) else (
     echo REM %cmd%>> "%~dp0%name%.cmd"
 )
-echo call getme --exclude envscripts %exe% 1 %args% %%*>> "%~dp0%name%.cmd"
+echo getme --exclude envscripts %exe% 1 %args% %%*>> "%~dp0%name%.cmd"
 echo Alias set:
 echo %name%          %exe% %args%
 goto :eof

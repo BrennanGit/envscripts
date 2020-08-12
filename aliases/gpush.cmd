@@ -1,6 +1,6 @@
 @echo off
 REM git push
-git push %*
+call getme --exclude envscripts git 1 push %*
 if %errorlevel%==0 (goto :eof)
 
 echo Attempting to set upstream branch

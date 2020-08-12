@@ -23,6 +23,8 @@ if "%1"=="--exclude" (
     )
 )
 
+set "_args=%_args:"=""%"
+
 if not "%2"=="" (
     for /f "tokens=2,* delims= " %%a in ("%_args%") do set ARGS=%%b
 )
@@ -45,13 +47,14 @@ for /f "tokens=* delims= " %%a in ('where %_find%') do (
 )
 goto :EOF
 
+
 :USAGE
 echo usage:
 echo   getme CMD            - Print all available binaries with numbers
 echo   getme CMD NUM [ARGS] - Select binary and run with ARGS
-goto :eof
+goto :EOF
 
 
 :RUN
-"%CMD%" %ARGS%
+"%CMD%" %ARGS:""="%
 exit /b %ERRORLEVEL%

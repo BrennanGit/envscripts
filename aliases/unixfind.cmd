@@ -1,2 +1,2 @@
 @echo off
-call getme --exclude envscripts find 2 %*
+getme --exclude envscripts find 2 %*
