@@ -2,3 +2,7 @@ go2targets.bat
 */vendor/Sublime Text 3/*
 *.history
 *user-aliases.cmd
+aliases/test0.cmd
+aliases/repo.cmd
+aliases/jcis1.cmd
+aliases/jcim0.cmd

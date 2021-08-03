@@ -5,6 +5,19 @@ local home_dir = "C:\\Users\\brennan"
 local scratch_dir = "C:\\Users\\brennan\\OneDrive - Xmos\\Documents\\Scratch"
 local sb_dir = "C:\\Users\\brennan\\sb"
 
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
 function scandir(directory)
     local i, t, popen = 0, {}, io.popen
     local pfile = popen([[dir "]]..directory..[[" /b /ad]])
@@ -57,3 +70,7 @@ local edit_parser = parser({
 
 clink.arg.register_parser("edit", edit_parser)
 clink.arg.register_parser("edit.cmd", edit_parser)
+clink.arg.register_parser("editvs", edit_parser)
+clink.arg.register_parser("editvs.cmd", edit_parser)
+clink.arg.register_parser("editsubl", edit_parser)
+clink.arg.register_parser("editsubl.cmd", edit_parser)

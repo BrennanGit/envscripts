@@ -1,3 +1,3 @@
 @echo off
-REM v ssh bfe -c 
-"C:\Users\brennan\envscripts\aliases\blt.cmd" cd /xgit ; git push
+REM push with bash
+call getme --exclude envscripts bash 1 -c "git push"
