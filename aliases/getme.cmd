@@ -8,6 +8,8 @@ set _num=None
 set _exclude=None
 
 if "%1"=="" goto USAGE
+if "%1"=="-h" goto USAGE
+if "%1"=="--help" goto USAGE
 if "%1"=="--exclude" (
     set _exclude=%2
     set "_args=!_args:*%1 =!"
