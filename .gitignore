@@ -1,4 +1,4 @@
-go2targets.bat
+go2targets/*
 */vendor/Sublime Text 3/*
 *.history
 *user-aliases.cmd
